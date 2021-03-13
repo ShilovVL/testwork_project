@@ -20,7 +20,7 @@ def test_guest_can_add_product_to_basket(browser, promo_offer):
      time.sleep(2)
      page.product_price_is_correct()
 
-@pytest.mark.xfail
+pytest.mark.xfail(reason="test should fall because guest can see success message after adding product to basket")
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
     page = ProductPage(browser, link)
@@ -35,7 +35,7 @@ def test_guest_cant_see_success_message(browser):
     page.open()
     page.check_success_message_on_product_page()
 
-@pytest.mark.xfail
+@pytest.mark.xfail(reason="test should fall because success message is not disappeared")
 def test_message_disappeared_after_adding_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/"
     page = ProductPage(browser, link)
