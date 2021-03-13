@@ -1,7 +1,7 @@
 
-from pages.main_page import MainPage # Windows нужно без точки, 4 Linux - .pages.main_page
-from pages.login_page import LoginPage
-from pages.basket_page import BasketPage
+from .pages.main_page import MainPage # Windows нужно без точки, 4 Linux - .pages.main_page
+from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
 import pytest
 
 def test_guest_can_see_login_url(browser):

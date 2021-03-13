@@ -1,13 +1,13 @@
-from pages.main_page import MainPage # в Windows .pages.main_page нужно без точки,
+from .pages.main_page import MainPage # в Windows .pages.main_page нужно без точки,
                                      #в Linux - с точкой!
 
-from pages.product_page import ProductPage
-from pages.login_page import LoginPage
-from pages.basket_page import BasketPage
+from .pages.product_page import ProductPage
+from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
 import time
 import pytest
 
-@pytest.mark.parametrize('promo_offer', ["0","1", "2", "3", "4", "5", "6",  "8", "9"])
+@pytest.mark.parametrize('promo_offer', ["0","1"])
 @pytest.mark.need_review
 def test_guest_can_add_product_to_basket(browser, promo_offer):
      link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{promo_offer}"
