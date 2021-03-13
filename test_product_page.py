@@ -1,8 +1,9 @@
-from .pages.main_page import MainPage 
+from pages.main_page import MainPage # в Windows .pages.main_page нужно без точки,
+                                     #в Linux - с точкой!
 
-from .pages.product_page import ProductPage
-from .pages.login_page import LoginPage
-from .pages.basket_page import BasketPage
+from pages.product_page import ProductPage
+from pages.login_page import LoginPage
+from pages.basket_page import BasketPage
 import time
 import pytest
 
